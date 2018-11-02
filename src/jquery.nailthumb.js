@@ -529,7 +529,7 @@
         var dims = null, i = 0, offset, elem;
 
         while ((elem = elems[i++])) {
-            var hiddenElems = $(elem).parents().andSelf().filter(':hidden');
+            var hiddenElems = $(elem).parents().addBack().filter(':hidden');
             if ( ! hiddenElems.length ) {
                 dims = getDims(elem);
             } else {
@@ -558,7 +558,7 @@
         var dims = null, i = 0, offset, elem;
 
         while ((elem = elems[i++])) {
-            var hiddenElems = $(elem).parents().andSelf().filter(':hidden');
+            var hiddenElems = $(elem).parents().addBack().filter(':hidden');
             if ( ! hiddenElems.length ) {
                 dims = getDims(elem);
             } else {
